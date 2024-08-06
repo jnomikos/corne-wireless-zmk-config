@@ -13,7 +13,7 @@
 
         ctrl-ez {
             bindings = <&kp LCTRL>;
-            key-positions = <41 36>;
+            key-positions = <41 37>;
             timeout-ms = <400>;
         };
     };
