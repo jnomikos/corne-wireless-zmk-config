@@ -13,7 +13,7 @@
 
         layer_2 {
             bindings = <&mo 2>;
-            key-positions = <37 40>;
+            key-positions = <37 41>;
             timeout-ms = <200>;
         };
     };
