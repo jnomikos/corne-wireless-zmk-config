@@ -16,6 +16,11 @@
             key-positions = <37 41>;
             timeout-ms = <200>;
         };
+
+        gaming_time {
+            bindings = <&tog 3>;
+            key-positions = <39 40 41>;
+        };
     };
 
     keymap {
@@ -66,6 +71,15 @@
 &trans  &kp K_PREV  &kp K_NEXT  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_GUI  &kp F12
 &trans  &trans      &trans      &trans             &trans        &trans              &trans    &trans    &trans  &trans     &trans        &trans
                                 &kp LGUI           &trans        &kp SPACE           &kp RET   &trans    &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E      &kp R             &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F             &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp LS(LEFT_ALT)  &trans       &trans     &trans  &trans  &trans  &trans  &trans
+                         &kp LSHFT  &kp SPACE         &kp LCTRL    &kp LCTRL  &trans  &tog 0
             >;
         };
     };
