@@ -11,12 +11,6 @@
     combos {
         compatible = "zmk,combos";
 
-        layer_2 {
-            bindings = <&mo 2>;
-            key-positions = <16 41>;
-            timeout-ms = <200>;
-        };
-
         gaming_time {
             bindings = <&tog 3>;
             key-positions = <39 40 41>;
