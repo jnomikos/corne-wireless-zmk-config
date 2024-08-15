@@ -15,11 +15,6 @@
             bindings = <&tog 0>;
             key-positions = <39 40 41>;
         };
-
-        layer {
-            bindings = <&mo 2>;
-            key-positions = <41 36>;
-        };
     };
 
     keymap {
