@@ -12,12 +12,12 @@
         compatible = "zmk,combos";
 
         gaming_time {
-            bindings = <&tog 3>;
+            bindings = <&tog 0>;
             key-positions = <39 40 41>;
         };
 
         layer {
-            bindings = <&mo 2>;
+            bindings = <&tog 2>;
             key-positions = <41 36>;
         };
     };
@@ -34,14 +34,48 @@
 
             display-name = "Base";
             bindings = <
-&kp LA(TAB)   &kp Q  &kp W  &kp E  &kp R           &kp T        &kp Y      &kp U      &kp I          &kp O    &kp P     &kp ESCAPE
-&kp TAB       &kp A  &kp S  &kp D  &kp F           &kp G        &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V           &kp B        &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
-                            &mo 1  &kp LEFT_SHIFT  &kp SPACE    &kp LCTRL  &kp ENTER  &kp BACKSPACE
+&kp LA(TAB)   &kp Q  &kp W  &kp E      &kp R           &kp T        &kp Y      &kp U      &kp I          &kp O    &kp P     &kp ESCAPE
+&kp LEFT_ALT  &kp A  &kp S  &kp D      &kp F           &kp G        &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL     &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp LGUI
+                            &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &lt 1 TAB  &kp ENTER  &kp BACKSPACE
             >;
         };
 
-        raise_layer {
+        numbers_symbols {
+            bindings = <
+&trans  &kp PRINTSCREEN  &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH    &kp EQUAL  &kp NUMBER_7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans           &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH        &kp MINUS  &kp N4        &kp N5  &kp N6  &trans  &trans
+&trans  &trans           &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans           &kp N0     &kp N1        &kp N2  &kp N3  &trans  &trans
+                                    &trans                &trans                 &trans           &trans     &trans        &trans
+            >;
+        };
+
+        arrows_functions {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            display-name = "Lower";
+            bindings = <
+&trans  &trans      &trans      &trans             &trans        &trans              &trans    &kp UP_ARROW  &trans     &trans  &trans  &trans
+&trans  &kp K_PREV  &kp K_NEXT  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE    &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans  &trans
+&trans  &trans      &trans      &trans             &trans        &trans              &trans    &trans        &trans     &trans  &trans  &trans
+                                &kp LGUI           &trans        &kp SPACE           &kp RET   &trans        &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &trans  &trans  &to 0
+            >;
+        };
+
+        old_num_symbols {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -54,31 +88,6 @@
 &kp LCTRL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS  &kp EQUAL  &kp GT           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
 &kp LSHFT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDER  &kp PLUS   &kp LT           &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE
                                        &trans        &trans        &kp SPACE       &kp RET    &trans     &trans
-            >;
-        };
-
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Lower";
-            bindings = <
-&trans  &kp F1      &kp F2      &kp F3             &kp F4        &kp F5              &kp F6    &kp F7    &kp F8  &kp F9     &kp F10       &kp F11
-&trans  &kp K_PREV  &kp K_NEXT  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_GUI  &kp F12
-&trans  &trans      &trans      &trans             &trans        &trans              &trans    &trans    &trans  &trans     &trans        &trans
-                                &kp LGUI           &trans        &kp SPACE           &kp RET   &trans    &trans
-            >;
-        };
-
-        gaming {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&mo 1   &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &trans  &trans  &to 0
             >;
         };
     };
