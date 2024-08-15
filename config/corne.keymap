@@ -59,10 +59,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans      &trans      &trans             &trans        &trans              &trans    &kp UP_ARROW  &trans     &trans  &trans  &trans
-&trans  &kp K_PREV  &kp K_NEXT  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE    &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans  &trans
-&trans  &trans      &trans      &trans             &trans        &trans              &trans    &trans        &trans     &trans  &trans  &trans
-                                &kp LGUI           &trans        &kp SPACE           &kp RET   &trans        &trans
+&trans  &trans      &trans      &trans             &trans        &trans              &trans   &trans          &kp UP_ARROW  &trans     &trans  &trans
+&trans  &kp K_PREV  &kp K_NEXT  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE    &trans   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans      &trans      &trans             &trans        &trans              &trans   &trans          &trans        &trans     &trans  &trans
+                                &kp LGUI           &trans        &kp SPACE           &kp RET  &trans          &trans
             >;
         };
 
