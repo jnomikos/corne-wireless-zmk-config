@@ -12,7 +12,7 @@
         compatible = "zmk,combos";
 
         gaming_time {
-            bindings = <&tog 0>;
+            bindings = <&tog 3>;
             key-positions = <39 40 41>;
         };
 
