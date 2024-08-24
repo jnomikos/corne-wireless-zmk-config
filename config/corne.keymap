@@ -24,7 +24,12 @@
 
         bt {
             bindings = <&mo 4>;
-            key-positions = <39 38 37>;
+            key-positions = <38 37 39>;
+        };
+
+        bt-clr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <0 12 24>;
         };
     };
 
