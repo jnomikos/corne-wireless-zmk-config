@@ -28,13 +28,13 @@
         };
 
         bt-clr {
-            bindings = <&bt BT_CLR>;
+            bindings = <&bt BT_PRV>;
             key-positions = <0 12 24>;
         };
 
-        at {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <12 37>;
+        next {
+            bindings = <&bt BT_NXT>;
+            key-positions = <11 23 35>;
         };
     };
 
