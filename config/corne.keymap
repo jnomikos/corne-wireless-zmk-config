@@ -36,11 +36,6 @@
             bindings = <&bt BT_NXT>;
             key-positions = <11 23 35>;
         };
-
-        livecoding {
-            bindings = <&kp LC(LA(F11))>;
-            key-positions = <34 35>;
-        };
     };
 
     keymap {
